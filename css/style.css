@@ -1,29 +1,32 @@
 * {
   padding:0;
   margin:0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Cantarell', sans-serif;
+
 }
 
 .clearfix {
   overflow: auto;
 }
 
-.education-entry, .work-entry, .project-entry {
+.education-entry, .work-entry, .project-entry, .enhance-entry {
   padding-left: 5%;
   padding-right: 5%;
 }
 
 h1 {
+  font-weight: bold;
   font-size: 40px;
-  color: #F5A623;
+  color: #E25D33;
   line-height: 48px;
   display: inline;
 }
 
-h2 {
+
+.h2Gray {
   font-weight: bold;
   font-size: 24px;
-  color: #999999;
+  color: #333333;
   line-height: 29px;
   padding: 10px;
 }
@@ -31,14 +34,14 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000000;
+  color: #FFFFFF;
   line-height: 22px;
 }
 
 h4 {
   font-weight: bold;
   font-size: 14px;
-  color: #4A4A4A;
+  color: #E25D33;
   line-height: 17px;
 }
 
@@ -66,6 +69,10 @@ h2, h3, h4, h5 {
 
 }
 
+#skills{
+flex-direction:column;
+}
+
 p {
   font-size: 14px;
   color: #333333;
@@ -87,16 +94,20 @@ a {
 }
 
 #skillsH3 {
-  color: #F5AE23;
+  color: #E25D33;
   display: none;
 }
 
-.orange {
-  background-color: #F5AE23;
+.onlineH3 {
+  color: #222930;
 }
 
-.orange-text {
-  color: #F5AE23;
+.reddish {
+  background-color: #E25D33;
+}
+
+.reddish-text {
+  color: #E25D33;
 }
 
 .white-text {
@@ -104,19 +115,22 @@ a {
   color: #FFFFFF;
 }
 
+
 .gray {
-  background-color: #F3F3F3;
+  background-color: #DCD8CF;
   padding-bottom: 10px;
   clear:both;
+  border-radius: 15px;
 }
 
-.dark-gray {
-  background-color: #4A4A4A;
+.near-black {
+  background-color: #282827;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #282827;
+
 }
 
 .flex-box {
@@ -144,6 +158,11 @@ ul {
   padding: 10px;
   width: 200px;
   display: none;
+}
+
+.projpic {
+  padding: 10px;
+  width: 200px;
 }
 
 img {
@@ -199,6 +218,7 @@ span {
   height: 100%;
   margin-left: 5%;
   margin-right: 5%;
+
 }
 
 #mapDiv {
@@ -206,6 +226,8 @@ span {
   width: 100%;
   padding-bottom: 5%;
 }
+
+#map div div div div div div img{visibility:none}
 
 @media only screen and (min-width: 750px) {
   #skillsH3,
