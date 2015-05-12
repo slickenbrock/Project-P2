@@ -57,7 +57,7 @@ var education = {
 		"dates": 2010,
 		"location": "Washington, D.C",
 		"degree": "BA",
-		"majors": ["English", "Comparitive Literature"]
+		"majors": ["English", "Comparative Literature"]
 	}
 	],
 
