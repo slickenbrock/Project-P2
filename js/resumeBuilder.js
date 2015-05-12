@@ -51,7 +51,7 @@ var work = {
 };
 
 var education = {
-	"school":[
+	"school": [
 	{
 		"name": "Georgetown University",
 		"dates": 2010,
@@ -112,14 +112,10 @@ var projects = {
 	]
 };
 
-var displayWork = function(){
-	work.display();
-};
 
-work.display = function()
-{
-	if (work.jobs.length > 0)
-	{
+work.display = function(){
+	if (work.jobs.length > 0){
+
 		$("#workExperience").append(HTMLworkStart);
 
 		for (var job in work.jobs){
@@ -140,14 +136,8 @@ work.display = function()
 };
 
 
-var displayProjects = function(){
-	projects.display();
-};
-
-projects.display = function()
-{
-	for (var project in projects.projects)
-	{
+projects.display = function(){
+	for (var project in projects.projects){
 		$("#projects").append(HTMLprojectStart);
 		var formattedTitle = HTMLprojectTitle.replace("%data%",projects.projects[project].title);
 		$(".project-entry:last").append(formattedTitle);
@@ -167,14 +157,9 @@ projects.display = function()
 	}
 };
 
-var displayEducation = function(){
-	education.display();
-};
 
-education.display = function()
-{
-	for ( var school in education.school)
-	{
+education.display = function(){
+	for ( var school in education.school){
 		$("#education").append(HTMLschoolStart);
 		var formattedName = HTMLschoolName.replace("%data%",education.school[school].name);
 		var formattedschoolDegree = HTMLschoolDegree.replace("%data%",education.school[school].degree);
@@ -190,8 +175,7 @@ education.display = function()
 
 	$("#education").append(HTMLonlineClasses);
 
-	for (var onlineCourse in education.onlineCourses)
-	{
+	for (var onlineCourse in education.onlineCourses){
 		$("#education").append(HTMLschoolStart);
 		var formattedOnlineTitle = HTMLonlineTitle.replace("%data%",education.onlineCourses[onlineCourse].title);
 		var formattedschoolName = HTMLonlineSchool.replace("%data%",education.onlineCourses[onlineCourse].school);
@@ -204,13 +188,8 @@ education.display = function()
 	}
 };
 
-var displayBio = function()
-{
-	bio.display();
-};
 
-bio.display = function()
-{
+bio.display = function(){
 	var formattedName = HTMLheaderName.replace("%data%",bio.name);
 	var formattedRole = HTMLheaderRole.replace("%data%",bio.role);
 	var formattedPic= HTMLbioPic.replace("%data%",bio.biopicURL);
@@ -238,8 +217,7 @@ bio.display = function()
 	{
 		$("#header").append(HTMLskillsStart);
 
-		for (var skill in bio.skills)
-		{
+		for (var skill in bio.skills){
 			var formattedSkill = HTMLskills.replace("%data%",bio.skills[skill]);
 			$("#skills").append(formattedSkill);
 		}
@@ -271,12 +249,10 @@ function inName(name){
 }
 
 
-
-//Display Everything!!!
-displayBio();
-displayProjects();
-displayEducation();
-displayWork();
+bio.display();
+projects.display();
+education.display();
+work.display();
 locationizer(work);
 displayEnhancements();
 
